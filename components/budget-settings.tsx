@@ -22,13 +22,13 @@ interface BudgetSettingsProps {
 export function BudgetSettings({ onNavigate }: BudgetSettingsProps) {
   const { user } = useAuth()
   const [budgets, setBudgets] = useState<Budget[]>([])
-//   const [loading, setLoading] = useState(true)
-//   const [isEditing, setIsEditing] = useState<string | null>(null)
-//   const [newBudget, setNewBudget] = useState({
-//     category: "",
-//     amount: "",
-//     month: getCurrentMonth(),
-//   })
+  const [loading, setLoading] = useState(true)
+  const [isEditing, setIsEditing] = useState<string | null>(null)
+  const [newBudget, setNewBudget] = useState({
+    category: "",
+    amount: "",
+    month: getCurrentMonth(),
+  })
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
   const [actionLoading, setActionLoading] = useState(false)
