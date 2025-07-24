@@ -29,21 +29,21 @@ export function BudgetSettings({ onNavigate }: BudgetSettingsProps) {
 //     amount: "",
 //     month: getCurrentMonth(),
 //   })
-//   const [error, setError] = useState("")
-//   const [success, setSuccess] = useState("")
-//   const [actionLoading, setActionLoading] = useState(false)
+  const [error, setError] = useState("")
+  const [success, setSuccess] = useState("")
+  const [actionLoading, setActionLoading] = useState(false)
 
-//   const categories = [
-//     "Food & Dining",
-//     "Transportation",
-//     "Shopping",
-//     "Entertainment",
-//     "Utilities",
-//     "Healthcare",
-//     "Education",
-//     "Travel",
-//     "Other",
-//   ]
+  const categories = [
+    "Food & Dining",
+    "Transportation",
+    "Shopping",
+    "Entertainment",
+    "Utilities",
+    "Healthcare",
+    "Education",
+    "Travel",
+    "Other",
+  ]
 
   useEffect(() => {
     if (user) {
