@@ -1,49 +1,49 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { MonthSelector } from "@/components/month-selector"
-import { LoadingSkeleton } from "@/components/loading-spinner"
-import { ArrowLeft, Settings, DollarSign, Tag, Trash2, Plus } from "lucide-react"
-import { useAuth } from "@/hooks/use-auth"
-import { apiClient } from "@/lib/api"
-import { formatCurrency, formatMonth, getCurrentMonth } from "@/lib/utils"
-import type { Page, Budget } from "@/lib/types"
+// import { useState, useEffect } from "react"
+// import { Button } from "@/components/ui/button"
+// import { Input } from "@/components/ui/input"
+// import { Label } from "@/components/ui/label"
+// import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+// import { Alert, AlertDescription } from "@/components/ui/alert"
+// import { MonthSelector } from "@/components/month-selector"
+// import { LoadingSkeleton } from "@/components/loading-spinner"
+// import { ArrowLeft, Settings, DollarSign, Tag, Trash2, Plus } from "lucide-react"
+// import { useAuth } from "@/hooks/use-auth"
+// import { apiClient } from "@/lib/api"
+// import { formatCurrency, formatMonth, getCurrentMonth } from "@/lib/utils"
+// import type { Page, Budget } from "@/lib/types"
 
-interface BudgetSettingsProps {
-  onNavigate: (page: Page) => void
-}
+// interface BudgetSettingsProps {
+//   onNavigate: (page: Page) => void
+// }
 
-export function BudgetSettings({ onNavigate }: BudgetSettingsProps) {
-  const { user } = useAuth()
-  const [budgets, setBudgets] = useState<Budget[]>([])
-  const [loading, setLoading] = useState(true)
-  const [isEditing, setIsEditing] = useState<string | null>(null)
-  const [newBudget, setNewBudget] = useState({
-    category: "",
-    amount: "",
-    month: getCurrentMonth(),
-  })
-  const [error, setError] = useState("")
-  const [success, setSuccess] = useState("")
-  const [actionLoading, setActionLoading] = useState(false)
+// export function BudgetSettings({ onNavigate }: BudgetSettingsProps) {
+//   const { user } = useAuth()
+//   const [budgets, setBudgets] = useState<Budget[]>([])
+//   const [loading, setLoading] = useState(true)
+//   const [isEditing, setIsEditing] = useState<string | null>(null)
+//   const [newBudget, setNewBudget] = useState({
+//     category: "",
+//     amount: "",
+//     month: getCurrentMonth(),
+//   })
+//   const [error, setError] = useState("")
+//   const [success, setSuccess] = useState("")
+//   const [actionLoading, setActionLoading] = useState(false)
 
-  const categories = [
-    "Food & Dining",
-    "Transportation",
-    "Shopping",
-    "Entertainment",
-    "Utilities",
-    "Healthcare",
-    "Education",
-    "Travel",
-    "Other",
-  ]
+//   const categories = [
+//     "Food & Dining",
+//     "Transportation",
+//     "Shopping",
+//     "Entertainment",
+//     "Utilities",
+//     "Healthcare",
+//     "Education",
+//     "Travel",
+//     "Other",
+//   ]
 
   useEffect(() => {
     if (user) {
