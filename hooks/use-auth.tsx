@@ -1,19 +1,19 @@
 "use client"
 
-// import type React from "react"
+import type React from "react"
 
-// import { createContext, useContext, useEffect, useState } from "react"
-// import {
-//   type User as FirebaseUser,
-//   signInWithEmailAndPassword,
-//   createUserWithEmailAndPassword,
-//   signOut,
-//   onAuthStateChanged,
-//   signInAnonymously,
-// } from "firebase/auth"
-// import { auth } from "@/lib/firebase"
-// import { apiClient } from "@/lib/api"
-// import type { User } from "@/lib/types"
+import { createContext, useContext, useEffect, useState } from "react"
+import {
+  type User as FirebaseUser,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+  signInAnonymously,
+} from "firebase/auth"
+import { auth } from "@/lib/firebase"
+import { apiClient } from "@/lib/api"
+import type { User } from "@/lib/types"
 
 interface AuthContextType {
   user: User | null
